@@ -1,14 +1,12 @@
 import React from 'react';
-import Button from './Button';
+import CreateOp from './components/CreateOp';
+import './App.css';
 
-function App() {
+const App =() => {
   return (
     <div className="App">
-      <h1>MFE1</h1>
-      <Button>
-        {''}
-        MFE1 Button
-      </Button>
+      <h1>Fill Below Form</h1>
+      <CreateOp></CreateOp>
     </div>
   );
 }

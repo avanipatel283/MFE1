@@ -1,0 +1,9 @@
+.create-form {
+  display: flex;
+  background-color : black;
+  color: aliceblue;
+  padding: 20px;
+  margin: 50px;
+  border-radius: 10px;
+  border: 1px solid black;
+}

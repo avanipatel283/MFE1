@@ -25,6 +25,10 @@ module.exports = {
           ], // to compile react to ES5
         },
       },
+      {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+      }
     ],
   },
   plugins: [
@@ -34,9 +38,22 @@ module.exports = {
         filename:
           'remoteEntry.js',
         exposes: {
-          './Button':
-            './src/Button',
+          './CreateOp':
+            './src/CreateOp',
         },
+        shared: {
+          react: { singleton: true, eager: true, requiredVersion: "^18.0.0" },
+          "react-dom": {
+            singleton: true,
+            eager: true,
+            requiredVersion: "^18.0.0",
+          },
+          "react-router-dom": {
+            singleton: true,
+            eager: true,
+            requiredVersion: "^18.0.0",
+          },
+        }
       }
     ),
     new HtmlWebpackPlugin({
